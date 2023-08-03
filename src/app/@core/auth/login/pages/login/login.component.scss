@@ -5,14 +5,6 @@
   height: 1px;
   background: #eee;
 }
-.h-custom {
-  height: calc(100% - 73px);
-}
-@media (max-width: 450px) {
-  .h-custom {
-    height: 100%;
-  }
-}
 .logForm {
   margin-top: auto;
   margin-bottom: auto;
@@ -20,4 +12,23 @@
 }
 .siteName {
   font-family: Poppins;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 570px) {
+  .h-custom {
+    height: 100%;
+  }
+  .imgDiv {
+    height: 150px !important;
+  }
+  .img-fluid {
+    height: 150px;
+    width: 100%;
+  }
+  .logForm {
+    margin-top: 0px;
+    padding-top: 10px;
+  }
 }
