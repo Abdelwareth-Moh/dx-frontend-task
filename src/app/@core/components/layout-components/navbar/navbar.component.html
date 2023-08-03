@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg justify-content-center">
   <!-- <a class="navbar-brand" > -->
   <div class="d-flex toggleDiv">
     <div>
@@ -43,13 +43,19 @@
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active">About Us</a>
+        <a class="nav-link" routerLinkActive="active">{{
+          "about" | translate
+        }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active">Contact Us</a>
+        <a class="nav-link" routerLinkActive="active">{{
+          "contact" | translate
+        }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active">Reviews</a>
+        <a class="nav-link" routerLinkActive="active">{{
+          "reviews" | translate
+        }}</a>
       </li>
       <li class="nav-item navSearch">
         <a class="nav-link"
@@ -65,9 +71,19 @@
             class="mt-1"
           />
           &nbsp;&nbsp;
-          <h6 class="account mt-1" (click)="translate.use('en')">EN</h6>
+          <h6
+            class="mt-1"
+            (click)="translate.use('en'); changeDirection('ltr')"
+          >
+            EN
+          </h6>
           |
-          <h6 class="account mt-1" (click)="translate.use('ar')">AR</h6></a
+          <h6
+            class="mt-1"
+            (click)="translate.use('ar'); changeDirection('rtl')"
+          >
+            AR
+          </h6></a
         >
       </li>
     </ul>

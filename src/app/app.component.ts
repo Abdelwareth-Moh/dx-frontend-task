@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslationService } from './@core/services/translation.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'dx-frontend-task';
   auth: boolean = false;
-  constructor() {
+  pageDir: string = 'ltr';
+  constructor(private transService: TranslationService) {
     if (localStorage.getItem('auth')) this.auth = true;
+    this.getPageDirection();
+  }
+  getPageDirection() {
+    this.transService.pageDirectionChange.subscribe((value) => {
+      this.pageDir = value;
+    });
   }
 }

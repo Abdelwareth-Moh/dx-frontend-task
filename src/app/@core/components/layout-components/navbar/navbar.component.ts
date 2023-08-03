@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { TranslationService } from 'src/app/@core/services/translation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,5 +11,12 @@ import { TranslateService } from '@ngx-translate/core';
 export class NavbarComponent {
   name = 'Angular';
   public isCollapsed = true;
-  constructor(private router: Router, public translate: TranslateService) {}
+  constructor(
+    private router: Router,
+    public translate: TranslateService,
+    private transService: TranslationService
+  ) {}
+  changeDirection(dir: any) {
+    this.transService.togglepageDirection(dir);
+  }
 }

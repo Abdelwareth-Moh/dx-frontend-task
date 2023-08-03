@@ -17,10 +17,14 @@
     font-family: "Inter";
   }
   .navbar-nav {
-    padding-left: 20vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    justify-content: space-between;
+    font-size: larger !important;
   }
   .navSearch {
-    padding-left: 7vw !important;
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
   }
   .navbar {
     overflow: hidden;
@@ -41,9 +45,6 @@
   }
   .notActive {
     color: rgba(0, 0, 0, 0.55) !important;
-    .underText {
-      border-bottom: none;
-    }
   }
 }
 @media (max-width: 990px) {
