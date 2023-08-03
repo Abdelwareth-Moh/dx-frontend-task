@@ -34,37 +34,41 @@
     [ngbCollapse]="isCollapsed"
   >
     <ul class="navbar-nav">
-      <li class="nav-item" routerLink="/home">
+      <li class="nav-item">
         <a
           class="nav-link"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
-          ><span class="underText">Hom</span>e</a
+          >{{ "categories" | translate }}</a
         >
       </li>
-      <li class="nav-item" routerLink="/about-us">
-        <a class="nav-link" routerLinkActive="active"
-          ><span class="underText">Abo</span>ut Us</a
-        >
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active">About Us</a>
       </li>
-      <li class="nav-item" routerLink="/services">
-        <a class="nav-link" routerLinkActive="active"
-          ><span class="underText">Ser</span>vices</a
-        >
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active">Contact Us</a>
       </li>
-      <!-- routerLink="/products" -->
-      <!-- <li class="nav-item" >
-          <a class="nav-link" routerLinkActive="active" ><span class="underText">Pro</span>ducts</a>
-        </li> -->
-      <li class="nav-item" routerLink="/contact-us">
-        <a class="nav-link" routerLinkActive="active"
-          ><span class="underText">Con</span>tact Us</a
-        >
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active">Reviews</a>
       </li>
       <li class="nav-item navSearch">
         <a class="nav-link"
           ><img src="./assets/Icons/search.svg" width="18" height="18"
         /></a>
+      </li>
+      <li class="nav-item d-flex">
+        <a class="nav-link d-flex"
+          ><img
+            src="./assets/Icons/lang.svg"
+            width="18"
+            height="18"
+            class="mt-1"
+          />
+          &nbsp;&nbsp;
+          <h6 class="account mt-1" (click)="translate.use('en')">EN</h6>
+          |
+          <h6 class="account mt-1" (click)="translate.use('ar')">AR</h6></a
+        >
       </li>
     </ul>
   </div>
