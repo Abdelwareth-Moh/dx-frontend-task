@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { CoreRoutingModule } from './core-routing.module';
 import { NavbarComponent } from './components/layout-components/navbar/navbar.component';
 import { FooterComponent } from './components/layout-components/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [NavbarComponent, FooterComponent],
-  imports: [CommonModule, CoreRoutingModule],
+  imports: [CommonModule, CoreRoutingModule, NgbModule],
   exports: [NavbarComponent, FooterComponent],
 })
 export class CoreModule {}
