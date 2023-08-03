@@ -8,5 +8,6 @@ import { FooterComponent } from './components/layout-components/footer/footer.co
 @NgModule({
   declarations: [NavbarComponent, FooterComponent],
   imports: [CommonModule, CoreRoutingModule],
+  exports: [NavbarComponent, FooterComponent],
 })
 export class CoreModule {}
