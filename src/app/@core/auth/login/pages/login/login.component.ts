@@ -23,19 +23,17 @@ export class LoginComponent {
     return this.loginForm.get('password');
   }
   login() {
-    //     this.adminService.login(this.loginForm.value).subscribe((data:any)=>{
-    //       localStorage.setItem('token',data.token)
-    //       localStorage.setItem('role',data.role[0].name)
-    //       if(localStorage.getItem('role')=='Admin')
-    //     {
-    //       this.router.navigate(['/admin-dashboard/products'])
-    //     }
-    //     else
-    //     {      this.router.navigate(['/admin-dashboard'])
-    // }
-    //     },
-    //     (error:any)=>{
-    //     }
-    //     )
+    let userInfo = this.loginForm.value;
+    if (userInfo.email == 'admin' && userInfo.password == 'admin') {
+      localStorage.setItem('auth', 'authorized');
+      localStorage.setItem('role', 'admin');
+      alert('admin');
+    } else if (userInfo.email == 'user' && userInfo.password == 'user') {
+      localStorage.setItem('auth', 'authorized');
+      localStorage.setItem('role', 'user');
+      alert('user');
+    } else {
+      alert('error');
+    }
   }
 }
