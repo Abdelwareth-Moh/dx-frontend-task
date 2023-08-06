@@ -1,7 +1,9 @@
 <div class="container">
+  <div class="text-center"><h2>Categories</h2></div>
+
   <div class="row">
     <div
-      class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6"
+      class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12"
       *ngFor="let cat of categories"
     >
       <div class="card cat" [routerLink]="['category-products/', cat]">
@@ -11,6 +13,8 @@
       </div>
     </div>
   </div>
+  <div class="text-center"><h2>Products</h2></div>
+
   <div class="row">
     <div
       class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12"

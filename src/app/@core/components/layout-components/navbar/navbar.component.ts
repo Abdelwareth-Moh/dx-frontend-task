@@ -22,4 +22,9 @@ export class NavbarComponent {
   changeDirection(dir: any) {
     this.transService.togglepageDirection(dir);
   }
+  logout() {
+    localStorage.removeItem('auth');
+    localStorage.removeItem('role');
+    this.router.navigate(['']);
+  }
 }

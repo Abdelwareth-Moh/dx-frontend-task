@@ -2,6 +2,7 @@
     "products":"products"
     , "about":"About Us"
     ,"contact":"Contact Us"
-    ,"reviews":"Reviews"
+    ,"reviews":"Reviews",
+    "logout":"Logout"
     
 }
