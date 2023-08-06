@@ -24,6 +24,9 @@ export class ProductService {
       this.domain.concat(`products/category/${cat}`)
     );
   }
+  getProducts(): Observable<IResponse> {
+    return this.http.get<IResponse>(this.domain.concat(`products`));
+  }
   getProductById(id: string): Observable<IResponse> {
     return this.http.get<IResponse>(this.domain.concat(`products/${id}`));
   }

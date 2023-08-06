@@ -1,8 +1,16 @@
 .container {
-  padding-top: 120px;
-  padding-bottom: 80px;
-  .card {
+  .cat {
     height: 120px;
     cursor: pointer;
+  }
+  .prodImg {
+    height: 280px;
+    width: 100%;
+  }
+  .card-title {
+    height: 120px;
+  }
+  .card-text {
+    height: 150px;
   }
 }

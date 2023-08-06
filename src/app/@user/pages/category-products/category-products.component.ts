@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/@core/services/product.service';
 })
 export class CategoryProductsComponent {
   catName!: string;
-  products: any = ([] = []);
+  products: any[] = [];
   constructor(
     public activatedRoute: ActivatedRoute,
     private _productService: ProductService
