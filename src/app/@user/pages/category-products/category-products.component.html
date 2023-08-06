@@ -1,1 +1,34 @@
-<p>category-products works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div
+      class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12"
+      *ngFor="let prod of products"
+    >
+      <div class="card mt-3 mb-3">
+        <div
+          class="bg-image hover-overlay ripple border-bottom"
+          data-mdb-ripple-color="light"
+        >
+          <img [src]="prod.image" class="prodImg" />
+          <a href="#!">
+            <div
+              class="mask"
+              style="background-color: rgba(251, 251, 251, 0.15)"
+            ></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ prod.title | slice : 0 : 150 }}</h5>
+          <p class="card-text">
+            {{ prod.description | slice : 0 : 200 }}
+          </p>
+          <a
+            class="btn btn-primary w-100"
+            [routerLink]="['/categories/product-detailes/', prod.id]"
+            >Go To Detailes</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
