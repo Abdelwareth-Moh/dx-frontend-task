@@ -27,11 +27,11 @@ export class LoginComponent {
     if (userInfo.email == 'admin' && userInfo.password == 'admin') {
       localStorage.setItem('auth', 'authorized');
       localStorage.setItem('role', 'admin');
-      alert('admin');
+      this.router.navigate(['/admin']);
     } else if (userInfo.email == 'user' && userInfo.password == 'user') {
       localStorage.setItem('auth', 'authorized');
       localStorage.setItem('role', 'user');
-      alert('user');
+      this.router.navigate(['/categories']);
     } else {
       alert('error');
     }
