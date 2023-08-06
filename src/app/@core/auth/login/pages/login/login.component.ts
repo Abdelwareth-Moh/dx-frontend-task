@@ -27,7 +27,7 @@ export class LoginComponent {
     if (userInfo.email == 'admin' && userInfo.password == 'admin') {
       localStorage.setItem('auth', 'authorized');
       localStorage.setItem('role', 'admin');
-      this.router.navigate(['/admin']);
+      this.router.navigate(['/products']);
     } else if (userInfo.email == 'user' && userInfo.password == 'user') {
       localStorage.setItem('auth', 'authorized');
       localStorage.setItem('role', 'user');

@@ -10,12 +10,15 @@ import { TranslationService } from 'src/app/@core/services/translation.service';
 })
 export class NavbarComponent {
   name = 'Angular';
+  role: any;
   public isCollapsed = true;
   constructor(
     private router: Router,
     public translate: TranslateService,
     private transService: TranslationService
-  ) {}
+  ) {
+    this.role = localStorage.getItem('role');
+  }
   changeDirection(dir: any) {
     this.transService.togglepageDirection(dir);
   }

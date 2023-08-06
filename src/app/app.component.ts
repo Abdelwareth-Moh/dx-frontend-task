@@ -11,7 +11,7 @@ export class AppComponent {
   auth: boolean = false;
   pageDir: string = 'ltr';
   constructor(private transService: TranslationService) {
-    if (localStorage.getItem('role') == 'user') this.auth = true;
+    if (localStorage.getItem('role')) this.auth = true;
     this.getPageDirection();
   }
   getPageDirection() {

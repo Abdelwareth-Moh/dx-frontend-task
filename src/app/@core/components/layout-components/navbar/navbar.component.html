@@ -2,7 +2,7 @@
   <!-- <a class="navbar-brand" > -->
   <div class="d-flex toggleDiv">
     <div>
-      <img src="./assets/Icons/logo.jpg" routerLink="/home" class="logoImg" />
+      <img src="./assets/Icons/logo.jpg" class="logoImg" />
     </div>
     <!-- </a> -->
     <div class="d-flex">
@@ -34,12 +34,20 @@
     [ngbCollapse]="isCollapsed"
   >
     <ul class="navbar-nav">
-      <li class="nav-item" routerLink="/categories">
+      <li class="nav-item" routerLink="/products" *ngIf="role == 'admin'">
         <a
           class="nav-link"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
-          >{{ "categories" | translate }}</a
+          >{{ "products" | translate }}</a
+        >
+      </li>
+      <li class="nav-item" routerLink="/categories" *ngIf="role == 'user'">
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ "products" | translate }}</a
         >
       </li>
       <li class="nav-item" routerLink="/on-shopping/about-us">
