@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="text-center"><h2>Products</h2></div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+        <th scope="col">Category</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.title }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.category }}</td>
+        <td>
+          <i class="fa-solid fa-trash-can">&nbsp;&nbsp;</i
+          ><i class="fa-solid fa-pen"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
